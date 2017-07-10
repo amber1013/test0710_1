@@ -6,27 +6,49 @@
 	<title></title>
 	<link rel="stylesheet" href="">
 	<style>
-		textarea{
-			width: 100%;
-			padding: 15px 0 0;
-			resize: none;
-			min-height: 100px;
-			max-height: 300px;
-			overflow: hidden;
+		.test {
+		  padding: 50px;
+		  display: inline-block;
+		  vertical-align: top;
 		}
-		.txtremain{
-			width: 300px;
-			position: relative;
+
+		.box {
+		  width: 300px;
+		  height: 300px;
+		  background-color: #000;
+		  margin-bottom: 10px;
 		}
-		.txtremain > span{
-			position: absolute;
-			top: 0;
-			right: 0;
+
+		.chart {
+		  margin: 10px;
+		  width: 600px;
+		  border: 2px solid black;
+		  padding: 2px 4px;
+		  height: 25px;
+		  vertical-align: middle;
 		}
-		.highlight{
-			color: grey;
-			font-weight: 800;
+		.chart li {
+		  display: inline-block;
+		  content: " ";
+		  border: 2px solid black;
+		  height: 80%;
+		  width: 8px;
+		  background-color: #000;
 		}
+
+		.bar {
+		  width: 300px;
+		  border: 2px solid black;
+		  height: 30px;
+		  padding: 3px;
+		  position: relative;
+		}
+		.bar .inline {
+		  height: 100%;
+		  width: 0px;
+		  background-color: black;
+		}
+
 	</style>
 </head>
 <body>
