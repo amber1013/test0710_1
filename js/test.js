@@ -26,7 +26,7 @@ function count_click(){
   setTimeout(function () {
       clickrange.off('click')
       button.attr('disabled',false);
-  }, 5000);
+  }, 15000);
 }
 function count_touch(){
   button.attr('disabled',true);
@@ -39,5 +39,5 @@ function count_touch(){
   setTimeout(function () {
       clickrange.off('touchend')
       button.attr('disabled',false);
-  }, 5000);
+  }, 15000);
 }
