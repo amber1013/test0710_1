@@ -22,6 +22,7 @@ function count_click(){
     count++;
     barline.css('width',count);
     countTotal.html(count);
+    imgChange();
   });
   setTimeout(function () {
       clickrange.off('click')
@@ -35,9 +36,20 @@ function count_touch(){
     count++;
     barline.css('width',count);
     countTotal.html(count);
+    imgChange();
   });
   setTimeout(function () {
       clickrange.off('touchend')
       button.attr('disabled',false);
   }, 15000);
+}
+
+function imgChange(){
+    var currentImg =  $('.imgChange');
+    var isActive = $('.imgChange').hasClass('active');
+    if(isActive){  //false
+      currentImg.removeClass("active");
+    }else{  //true
+       currentImg.addClass("active");
+    }
 }

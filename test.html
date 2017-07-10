@@ -61,12 +61,28 @@
 		.btn:hover{
 		  background-color: yellow
 		}
+		.imgChange {
+		  background: url("images/bear-1.png");
+		  width: 100px;
+		  height: 100px;
+		  background-position: center;
+		  background-size: 100%;
+		  background-repeat: no-repeat;
+		}
+		.imgChange.active {
+		  background: url("images/bear-2.png");
+		  width: 100px;
+		  height: 100px;
+		  background-position: center;
+		  background-size: 100%;
+		  background-repeat: no-repeat;
+		}
 
 	</style>
 </head>
 <body>
 	<div class="test">
-	  <div class="box" id="box1"></div>  
+	  <div class="imgChange" id="box1"></div>  
 	</div> 
 	<div class="test">
 	  <botton class="btn" id="start">start</botton>
@@ -76,7 +92,6 @@
 	  </div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script> -->
 	<script src="./js/test.js"></script>
 </body>
 </html>
