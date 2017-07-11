@@ -46,19 +46,21 @@
 		  height: 30px;
 		  padding: 3px;
 		  position: relative;
+		  margin-bottom: 50px
 		}
 		.bar .inline {
 		  height: 100%;
 		  width: 0px;
 		  background-color: black;
 		}
-		.btn{
+		.startBtn{
 		  border: 1px solid black;
+		  width: 300px;
 		  border-radius: 6px;
 		  cursor: pointer;
 		  padding: 6px;
 		}
-		.btn:hover{
+		.startBtn:hover{
 		  background-color: yellow
 		}
 		.imgChange {
@@ -77,6 +79,7 @@
 		  background-size: 100%;
 		  background-repeat: no-repeat;
 		}
+		
 
 	</style>
 </head>
@@ -85,11 +88,12 @@
 	  <div class="imgChange" id="box1"></div>  
 	</div> 
 	<div class="test">
-	  <botton class="btn" id="start">start</botton>
+	  <h1 id="countdown">5</h1>
 	  <h3>點擊次數</h3><h3 id="counter">0</h3><br/>
 	  <div class="bar">
 	    <div class="inline"></div>
 	  </div>
+	  <div class="startBtn" id="start">start</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 	<script src="./js/test.js"></script>
