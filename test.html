@@ -1,101 +1,95 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- 手機禁止縮放-->
-	<meta name="viewport" content="user-scalable=0">
-	<meta name="viewport" content="user-scalable=no">
-	<title></title>
-	<link rel="stylesheet" href="">
-	<style>
-		.test {
-		  padding: 50px;
-		  display: inline-block;
-		  vertical-align: top;
-		}
-
-		.box {
-		  width: 300px;
-		  height: 300px;
-		  background-color: #000;
-		  margin-bottom: 10px;
-		}
-
-		.chart {
-		  margin: 10px;
-		  width: 600px;
-		  border: 2px solid black;
-		  padding: 2px 4px;
-		  height: 25px;
-		  vertical-align: middle;
-		}
-		.chart li {
-		  display: inline-block;
-		  content: " ";
-		  border: 2px solid black;
-		  height: 80%;
-		  width: 8px;
-		  background-color: #000;
-		}
-
-		.bar {
-		  width: 300px;
-		  border: 2px solid black;
-		  height: 30px;
-		  padding: 3px;
-		  position: relative;
-		  margin-bottom: 50px
-		}
-		.bar .inline {
-		  height: 100%;
-		  width: 0px;
-		  background-color: black;
-		}
-		.startBtn{
-		  border: 1px solid black;
-		  width: 300px;
-		  border-radius: 6px;
-		  cursor: pointer;
-		  padding: 6px;
-		}
-		.startBtn:hover{
-		  background-color: yellow
-		}
-		.imgChange {
-		  background: url("images/bear-1.png");
-		  width: 150px;
-		  height: 150px;
-		  background-position: center;
-		  background-size: 100%;
-		  background-repeat: no-repeat;
-		}
-		.imgChange.active {
-		  background: url("images/bear-2.png");
-		  width: 150px;
-		  height: 150px;
-		  background-position: center;
-		  background-size: 100%;
-		  background-repeat: no-repeat;
-		}
-		
-
-	</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 手機禁止縮放-->
+    <meta name="viewport" content="user-scalable=0">
+    <meta name="viewport" content="user-scalable=no">
+    <title>Activity</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
 </head>
+
 <body>
-	<div class="test">
-	  <div class="imgChange" id="box1"></div>  
-	</div> 
-	<div class="test">
-	  <h1 id="countdown">5</h1>
-	  <h3>點擊次數</h3><h3 id="counter">0</h3><br/>
-	  <div class="bar">
-	    <div class="inline"></div>
-	  </div>
-	  <div class="startBtn" id="start">start</div>
-	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-	<script src="./js/test.js"></script>
+    <div class="container text-center" >
+        <section id="character">
+            <h1>選擇一位角色來幫世大運選手打氣吧！</h1>
+            <!-- Trigger the modal with a button -->
+            <div class="roleSelect">
+            	<button type="button" class="btn btn-info btn-lg roleBtn" data-toggle="modal" data-target="#role">選擇角色</button>
+            </div>
+            
+
+            <!-- Modal -->
+            <div class="modal fade" id="role" role="dialog" data-keyboard="false">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">選擇一個最適合您的角色吧!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="owl-carousel">
+                                <div class="item">
+                                    <a>
+                                        <img src="http://mmbiz.qpic.cn/mmbiz/NMz6OpWczOe1UVWN8MShIDDn2VVj26yJwibC9nIzzP3Z9XzYOe5K7gMpGYnCHgyTCHIH3koXcHLVLuDBNwwkNkg/640">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a>
+                                        <img src="http://www.aieat.com/file/image/pic/4a2991827787n888368779t23.jpg">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a>
+                                        <img src="http://www.twwiki.com/uploads/wiki/f0/8b/673299_24.jpeg">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a>
+                                        <img src="http://joymepic.joyme.com/article/uploads/allimg/201606/1466815877585079.jpg">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a>
+                                        <img src="http://vignette1.wikia.nocookie.net/maruko/images/a/ae/%E9%87%8E%E5%8F%A3%E7%AC%91%E5%AD%90.jpg/revision/latest?cb=20160215093021&path-prefix=zh">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default submitRole" data-dismiss="modal">確定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="display: none" id="game">
+            <div class="test">
+                <div class="imgChange" id="box1"></div>
+            </div>
+            <div class="test">
+                <h1 id="countdown">5</h1>
+                <h3>點擊次數</h3>
+                <h3 id="counter">0</h3>
+                <br/>
+                <div class="bar">
+                    <div class="inline"></div>
+                </div>
+                <div class="startBtn" id="start">start</div>
+            </div>
+        </section>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <script src="./js/test.js"></script>
 </body>
+
 </html>
