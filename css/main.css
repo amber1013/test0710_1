@@ -57,6 +57,10 @@
 .startBtn:hover {
     background-color: yellow
 }
+
+.imgrange{
+	width: 100%;
+}
 .imgChange {
     background: url("../images/bear-1.png");
     width: 150px;
@@ -64,6 +68,7 @@
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
+    margin: 30px auto;
 }
 .imgChange.active {
     background: url("../images/bear-2.png");
