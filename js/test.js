@@ -110,14 +110,18 @@ $('.owl-carousel').owlCarousel({
 //   // $('.imgChange').replace('background', $(this).find('img').attr('src')) 
 //   // console.log($('.imgChange').attr('background-url'))
 // });
-
+var currenturl = '';
 $('#role-owl-carousel').on('click', '.item a', function () {
-   $(this).parent().parent().siblings().children(".item").children('a').removeClass('focus')
-   $(this).addClass('focus')
-   // console.log();
+    currentImg = $(this).find('img').attr('src');
+    $(this).parent().parent().siblings().children(".item").children('a').removeClass('focus');
+    $(this).addClass('focus');
+    //取代原本的img
+    $('.imgChange').css('background','url('+ currentImg +')');
+    // console.log($(this).find('img').attr('data-id'));
 });
 
 $('.submitRole').click(function(){
-  $('#character').css('display','none');
-  $('#game').css('display','block');
+    $('#character').css('display','none');
+    $('#game').css('display','block');
+   
 });
