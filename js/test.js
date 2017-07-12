@@ -1,14 +1,14 @@
-$('#start').on("click touchstart", function(event) {
-    if (event.type == "touchstart") {
-        $(this).off('click').on('click', function(e) {
-            e.preventDefault();
-        });
-        count_touch();
-    } else {
-        count_click();
-    }
+// $('#start').on("click touchstart", function(event) {
+//     if (event.type == "touchstart") {
+//         $(this).off('click').on('touchend', function(e) {
+//             e.preventDefault();
+//         });
+//         count_touch();
+//     } else {
+//         count_click();
+//     }
 
-});
+// });
 
 var button = $('#start'),
     barline = $('.inline'),
@@ -78,6 +78,20 @@ function countdownfunc() {
     }
     countdownnumber--;
 }
+//game 倒數
+var countDownGame=3;
+var countDownGameId,y;
+function initial_game(){
+  y=document.getElementById("number");
+  y.innerHTML=countDownGame;
+  countDownGame--;
+  countDownGameId=window.setInterval(countdown,1000);
+}
+function countdown(){ 
+  y.innerHTML=countDownGame;
+  countDownGame--;
+}
+
 
 
 //owl 初始化
@@ -102,14 +116,6 @@ $('.owl-carousel').owlCarousel({
     }
 })
 
-
-// $(".item a").click(function(){
-//   // $(this).parent().parent().siblings().find('a').removeClass('active')
-//   // $(this).addClass('active');
-//   // console.log($(this).parent().parent().find('clone'))
-//   // $('.imgChange').replace('background', $(this).find('img').attr('src')) 
-//   // console.log($('.imgChange').attr('background-url'))
-// });
 var currenturl = '';
 $('#role-owl-carousel').on('click', '.item a', function () {
     currentImg = $(this).find('img').attr('src');
@@ -120,8 +126,33 @@ $('#role-owl-carousel').on('click', '.item a', function () {
     // console.log($(this).find('img').attr('data-id'));
 });
 
-$('.submitRole').click(function(){
+// $('.submitRole').click(function(){
+//     $('#character').css('display','none');
+//     $('#game').css('display','block');
+// });
+
+$('.submitRole').on("click touchstart", function(event) {
     $('#character').css('display','none');
     $('#game').css('display','block');
-   
+    if (event.type == "touchstart") {
+        $(this).off('click').on('touchend', function(e) {
+            e.preventDefault();
+        });
+        $('#myModal').modal('show');
+        initial_game();
+        setTimeout(function() {
+          count_touch();
+          $('#myModal').modal('hide')
+        }, 3000);
+    } else {
+        $('#myModal').modal('show');
+        initial_game();
+        setTimeout(function() {
+          count_click();
+          $('#myModal').modal('hide')
+        }, 3000);
+    }
+
 });
+
+

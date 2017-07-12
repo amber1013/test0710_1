@@ -143,3 +143,8 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+/*遊戲倒數*/
+.game_text{
+  	text-align: center
+}
