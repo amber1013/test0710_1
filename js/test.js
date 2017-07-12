@@ -72,7 +72,7 @@ function initial() {
 function countdownfunc() {
     x.innerHTML = countdownnumber;
     if (countdownnumber == 0) {
-        alert("倒數結束");
+        alert("GAMEOVER");
         clearInterval(countdownid);
         countdownnumber = 6;
     }
