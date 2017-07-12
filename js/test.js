@@ -90,6 +90,9 @@ function initial_game(){
 function countdown(){ 
   y.innerHTML=countDownGame;
   countDownGame--;
+  if (y.innerHTML==0){
+    y.innerHTML="STRAT";
+  }
 }
 
 
