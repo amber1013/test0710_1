@@ -144,18 +144,22 @@ $('.submitRole').on("click touchstart", function(event) {
         $('#myModal').modal('show');
         initial_game();
         setTimeout(function() {
+          hideModal();
           count_touch();
-          $('#myModal').modal('hide')
         }, 3000);
     } else {
         $('#myModal').modal('show');
         initial_game();
         setTimeout(function() {
+          hideModal();
           count_click();
-          $('#myModal').modal('hide')
         }, 3000);
     }
 
 });
 
-
+function hideModal(){
+    $("#myModal").removeClass("in");
+    $(".modal-backdrop").remove();
+    $("#myModal").hide();
+}
