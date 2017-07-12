@@ -101,7 +101,6 @@ function countdown(){
 $('.owl-carousel').owlCarousel({
     margin: 20,
     responsiveClass: true,
-    nav: true, //左右按鈕
     loop: true,
     responsive: {
         0: {
@@ -111,10 +110,12 @@ $('.owl-carousel').owlCarousel({
             items: 2
         },
         600: {
-            items: 3
+            items: 3,
+            nav: true, //左右按鈕
         },
         1000: {
-            items: 4
+            items: 4,
+            nav: true, //左右按鈕
         }
     }
 })
