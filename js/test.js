@@ -82,9 +82,6 @@ function countdownfunc() {
 
 //owl 初始化
 $('.owl-carousel').owlCarousel({
-    autoplay: false,
-    autoplayHoverPause: true,
-    loop: true,
     margin: 20,
     responsiveClass: true,
     nav: true, //左右按鈕
@@ -106,16 +103,21 @@ $('.owl-carousel').owlCarousel({
 })
 
 
-$(".item a").click(function(){
-  $(this).parent().parent().siblings().find('a').removeClass('active')
-  $(this).addClass('active');
-  // $('.imgChange').replace('background', $(this).find('img').attr('src')) 
-  // console.log($('.imgChange').attr('background-url'))
+// $(".item a").click(function(){
+//   // $(this).parent().parent().siblings().find('a').removeClass('active')
+//   // $(this).addClass('active');
+//   // console.log($(this).parent().parent().find('clone'))
+//   // $('.imgChange').replace('background', $(this).find('img').attr('src')) 
+//   // console.log($('.imgChange').attr('background-url'))
+// });
+
+$('#role-owl-carousel').on('click', '.item a', function () {
+   $(this).parent().parent().siblings().children(".item").children('a').removeClass('focus')
+   $(this).addClass('focus')
+   // console.log();
 });
 
 $('.submitRole').click(function(){
   $('#character').css('display','none');
   $('#game').css('display','block');
-  // console.log($('.imgChange').attr('background-url'));
-  // console.log("123");
 });

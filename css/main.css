@@ -118,7 +118,7 @@
     display: block;
     width: 100%;
 }
-.item a:hover:before, .item a.active:before {
+.item a:hover:before, .item a.focus:before {
     content: "";
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
